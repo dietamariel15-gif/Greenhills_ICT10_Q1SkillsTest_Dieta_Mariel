@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receipt Generator</title>
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2026.7.3/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2026.7.3/core.js">
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffa3ff;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .item {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #receipt {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f361bb;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🍔 Receipt Generator</h1>
+
+    <h3>Select Your Items</h3>
+
+    <div class="item">
+        <input type="checkbox" id="burger" value="80">
+        <label for="burger">Burger - ₱80</label>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" id="fries" value="50">
+        <label for="fries">Fries - ₱50</label>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" id="spaghetti" value="70">
+        <label for="spaghetti">Spaghetti - ₱70</label>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" id="chicken" value="100">
+        <label for="chicken">Chicken - ₱100</label>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" id="drink" value="30">
+        <label for="drink">Soft Drink - ₱30</label>
+    </div>
+
+    <button py-click="generate_receipt">
+        Generate Receipt
+    </button>
+
+    <div id="receipt"></div>
+
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
